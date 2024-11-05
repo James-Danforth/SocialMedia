@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"edu.lehigh.cse216.bug.admin","c":"App","l":"App()","u":"%3Cinit%3E()"},{"p":"edu.lehigh.cse216.bug.admin","c":"App","l":"main(String[])","u":"main(java.lang.String[])"},{"p":"edu.lehigh.cse216.bug.admin","c":"Database.RowData","l":"RowData(int, int, String)","u":"%3Cinit%3E(int,int,java.lang.String)"}];updateSearchResults();

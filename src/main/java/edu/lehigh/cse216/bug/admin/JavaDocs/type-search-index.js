@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"edu.lehigh.cse216.bug.admin","l":"App"},{"p":"edu.lehigh.cse216.bug.admin","l":"Database"},{"p":"edu.lehigh.cse216.bug.admin","l":"Database.RowData"}];updateSearchResults();
