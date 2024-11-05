@@ -1,0 +1,117 @@
+<!DOCTYPE html /> <!-- this is the main html file, served with local-deploy, and scripted with app.ts-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>The Buzz</title>
+  <link rel="stylesheet" href="todo.css" />
+  <script defer type="module" src="todo.js"></script>
+  <script src="app.js"></script>
+
+  <script src="https://accounts.google.com/gsi/client" async></script>
+  <script>
+    google.accounts.id.initialize({
+      client_id: 'the-buzz-419113',
+      callback: response => {
+        console.log(response);
+      }
+    });
+  </script>
+
+  <link rel="stylesheet" href="app.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="loginPage">
+    <h3>Login</h3>
+    <div id="g_id_onload"
+     data-client_id="the-buzz-419113"
+     data-context="signin"
+     data-login_uri="https://team-bug.dokku.cse.lehigh.edu/login"
+     data-itp_support="false">
+    </div>
+  </div>
+
+  <div id="showElements">
+    <h3>🐝    The Buzz</h3>
+    <button class="showFormButton">+</button>
+    <button class="showProfileButton">🕴️</button>
+    <button class="homeButton">🛖</button>
+    <div id="postsElements">
+      <div id="messageList"></div>
+    </div>
+  </div>
+
+  <div id="showPost">
+    <h3>View Post</h3>
+    <button class="showFormButton">+</button>
+    <button class="showProfileButton">🕴️</button>
+    <button class="homeButton">🛖</button>
+    <div id="commentElements">
+      <div id="postContent"></div>
+      <div id="commentList"></div>
+      <label>New Comment</label>
+      <textarea id="newComment"></textarea>
+      <button id="commentButton">Add</button>
+      <button id="commentCancel">Cancel</button>
+    </div>
+  </div>
+
+  <div id="editElement">
+    <h3>Edit Comment</h3>
+    <button class="showFormButton">+</button>
+    <button class="showProfileButton">🕴️</button>
+    <button class="homeButton">🛖</button>
+    <div id="editElements">
+      <label>Message</label>
+      <textarea id="editMessage"></textarea>
+      <span id="editCreated"></span>
+      <input type="hidden" id="editId" />
+      <button id="editButton">Update</button>
+      <button id="editCancel">Cancel</button>
+    </div>
+  </div>
+
+  <div id="addElement">
+    <h3>Add a New Entry</h3>
+    <button class="showFormButton">+</button>
+    <button class="showProfileButton">🕴️</button>
+    <button class="homeButton">🛖</button>
+    <div id="addElements">
+      <label>Message</label>
+      <textarea id="newMessage"></textarea>
+      <button id="addButton">Add</button>
+      <button id="addCancel">Cancel</button>
+    </div>
+  </div>
+
+  <div id="profilePage">
+    <h3>My Profile</h3>
+    <button class="showFormButton">+</button>
+    <button class="showProfileButton">🕴️</button>
+    <button class="homeButton">🛖</button>
+    <div id="profileElements">
+      <div id="profileEditDiv"></div>
+      <div id="profileDetails"></div>
+    </div>
+  </div>
+
+  <div id="editProfile">
+    <h3>Edit Note</h3>
+    <button class="showFormButton">+</button>
+    <button class="showProfileButton">🕴️</button>
+    <button class="homeButton">🛖</button>
+    <div id="profileEditElements">
+      <label>Note</label>
+      <textarea id="editNote"></textarea>
+      <span id="editNoteCreated"></span>
+      <input type="hidden" id="editUserId" />
+      <button id="noteButton">Update</button>
+      <button id="noteCancel">Cancel</button>
+    </div>
+  </div>
+  <app-root></app-root>
+</body>
+</html>
